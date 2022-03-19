@@ -14,7 +14,7 @@ class Search():
         return -1
 
     def binarySearch_leftbound(self, nums=[], find=None):
-        "左侧边界值的二分查找，返回的是小于find值在查找列表最左侧下标/返回查找列表第一个大于等于find值的下标"
+        "左侧边界值的二分查找。若找到，则返回在查找列表最左侧且等于find值的下标；反之，返回-1"
         Lnums = len(nums)
         left = 0
         right = Lnums  # [left,right)
@@ -31,7 +31,7 @@ class Search():
         return left if nums[left] == find else -1  # 待查找值不存在且小于查找列表最小值
 
     def binarySearch_rightbound(self, nums=[], find=None):
-        "左侧边界值的二分查找，返回的是小于find值在查找列表最左侧下标/返回查找列表第一个大于等于find值的下标"
+        "左侧边界值的二分查找。若找到，则返回的是在查找列表最右侧且等于find值的下标；反之，返回-1"
         Lnums = len(nums)
         left = 0
         right = Lnums  # [left,right)
